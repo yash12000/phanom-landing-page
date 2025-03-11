@@ -1,4 +1,4 @@
-/* Reset & General Styles */
+/* 🔹 Reset & General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,19 +10,19 @@ body {
   background-color: #ffffff;
 }
 
-/* Header */
+/* 🔹 Header */
 .header {
   background: #ffffff;
   padding: 15px 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
   position: relative;
   width: 100%;
 }
 
-/* Container */
+/* 🔹 Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -31,13 +31,13 @@ body {
   align-items: center;
 }
 
-/* Logo */
+/* 🔹 Logo */
 .logo img {
   height: 70px;
   margin-left: -15px;
 }
 
-/* Floating Bubble Image */
+/* 🔹 Floating Bubble Image */
 .bubble-img {
   position: absolute;
   top: 10px;
@@ -46,10 +46,12 @@ body {
   opacity: 0.8;
 }
 
-/* Navigation */
+/* 🔹 Navigation */
 .nav {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav ul {
@@ -74,7 +76,11 @@ body {
   color: #6a0dad;
 }
 
-/* Button */
+/* 🔹 Book an Appointment Button */
+.book-appointment {
+  margin-left: auto;
+}
+
 .btn {
   background: #6a0dad;
   color: white;
@@ -90,14 +96,27 @@ body {
   background: #4e0785;
 }
 
-/* Mobile Menu Icon */
+/* 🔹 Mobile Menu Icon */
 .menu-icon {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-/* Responsive Styles */
+/* 🔹 Service Section */
+.service-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 60px;
+}
+
+.service-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* 🔹 Responsive Styles */
 @media (max-width: 1024px) {
   .header {
     padding: 15px 20px;
@@ -111,29 +130,34 @@ body {
     gap: 15px;
   }
 
+  .nav ul li a {
+    font-size: 14px;
+  }
+
   .btn {
-    padding: 8px 15px;
+    padding: 8px 16px;
     font-size: 13px;
+  }
+
+  .service-section {
+    justify-content: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: white;
     text-align: center;
     padding: 10px 0;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav.open {
@@ -149,10 +173,19 @@ body {
     display: block;
   }
 
-  .bubble-img {
-    width: 40px;
-    top: 15px;
-    right: 15px;
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .book-appointment {
+    margin-left: 0;
+  }
+
+  .service-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -165,14 +198,26 @@ body {
     height: 50px;
   }
 
-  .btn {
-    padding: 7px 12px;
-    font-size: 12px;
+  .bubble-img {
+    width: 40px;
+    top: 5px;
+    right: 10px;
   }
 
-  .bubble-img {
-    width: 35px;
-    top: 10px;
-    right: 10px;
+  .menu-icon {
+    font-size: 22px;
+  }
+
+  .nav {
+    top: 60px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  .service-section {
+    padding: 30px 5%;
   }
 }

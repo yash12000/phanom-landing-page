@@ -14,8 +14,9 @@
     #8165e4 70%,
     #bd2ce8 90%
   );
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  flex-wrap: wrap;
 }
 
 /* Left Section (Text Content) */
@@ -52,7 +53,15 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* Call-To-Action Button */
+/* Divider Line */
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 30px 0;
+}
+
+/* Bigger Call-To-Action Button */
 .cta-button {
   background-color: #8165e4;
   color: white;
@@ -70,7 +79,7 @@ h1 {
   background-color: #bd2ce8;
 }
 
-/* Right Side - SEO Image */
+/* Right Side - Image */
 .hero-image {
   width: 45%;
   display: flex;
@@ -104,7 +113,7 @@ h1 {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-/* Large Number - Exact 55.9px */
+/* Large Number */
 .stats div span:first-child {
   font-size: 55.9px;
   font-weight: 700;
@@ -121,38 +130,20 @@ h1 {
   opacity: 0.9;
 }
 
-/* Divider Between Stats */
-.stats div:not(:last-child) {
-  position: relative;
-  padding-right: 40px;
-}
-
-.stats div:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60px;
-  width: 4px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Responsive Styles */
+/* 🔹 Responsive Styles */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    height: auto;
-    padding: 30px 5%;
+    padding: 60px 5%;
   }
 
   .hero-content {
-    width: 100%;
+    width: 90%;
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 50px;
   }
 
   .hero-description {
@@ -160,36 +151,40 @@ h1 {
   }
 
   .cta-button {
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 20px;
+    padding: 16px 30px;
   }
 
   .hero-image {
     width: 80%;
-    margin-top: 30px;
+    margin-top: 20px;
+    justify-content: center;
   }
 
   .stats {
     position: relative;
     bottom: unset;
     right: unset;
-    flex-direction: column;
-    gap: 20px;
     margin-top: 40px;
+    gap: 50px;
   }
 
-  .stats div {
-    padding-right: 0;
+  .stats div span:first-child {
+    font-size: 45px;
   }
 
-  .stats div:not(:last-child)::after {
-    display: none;
+  .stats div span:last-child {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-content {
+    width: 100%;
+  }
+
   h1 {
-    font-size: 40px;
+    font-size: 42px;
   }
 
   .hero-description {
@@ -197,16 +192,35 @@ h1 {
   }
 
   .cta-button {
-    font-size: 16px;
-    padding: 12px 25px;
+    font-size: 18px;
+    padding: 14px 25px;
   }
 
   .hero-image {
     width: 100%;
+    margin-top: 30px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .stats div span:first-child {
+    font-size: 40px;
+  }
+
+  .stats div span:last-child {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -216,15 +230,20 @@ h1 {
   }
 
   .cta-button {
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 20px;
   }
 
   .stats div span:first-child {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .stats div span:last-child {
-    font-size: 20px;
+    font-size: 18px;
   }
 }

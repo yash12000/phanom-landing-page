@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
-
+/* ✅ VPS Section - Full Width & Responsive */
 .vps-section {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 10%;
+  padding: 7rem 10%;
   background: linear-gradient(45deg, #c81ce659, #8d59e559, #439ce159);
   background-size: 400% 400%;
   animation: gradientBG 5s ease-in-out infinite;
@@ -15,35 +14,44 @@
   min-height: 100vh;
 }
 
-/* Background Animation */
+/* ✅ Background Animation */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
   }
+  25% {
+    background-position: 50% 100%;
+  }
   50% {
     background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
   }
   100% {
     background-position: 0% 50%;
   }
 }
 
-/* Man Image Positioned to the Left */
+/* ✅ Man Image - Left Aligned & Responsive */
 .man-image {
   width: auto;
-  height: auto;
-  max-height: 85vh;
+  height: 100%;
+  max-height: 90vh;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
 }
 
-/* Guide Section */
+/* ✅ Guide Section - Left Positioned */
 .guide-section {
   position: absolute;
   top: 2rem;
   left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   z-index: 2;
 }
 
@@ -60,14 +68,15 @@
   color: #000;
 }
 
-/* VPS Hosting Details */
+/* ✅ VPS Details - Pushed to Right */
 .vps-details {
-  max-width: 600px;
+  max-width: 650px;
   z-index: 2;
   text-align: left;
   margin-left: auto;
 }
 
+/* ✅ Titles & Headings */
 .vps-title {
   font-size: 1.6rem;
   color: #000;
@@ -80,7 +89,7 @@
   color: #000;
 }
 
-/* Features List */
+/* ✅ Features List */
 .vps-features {
   list-style: none;
   padding: 0;
@@ -95,12 +104,11 @@
   color: #000;
 }
 
-/* CTA Buttons */
+/* ✅ CTA Buttons */
 .cta-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .pricing-btn,
@@ -111,7 +119,6 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  white-space: nowrap;
 }
 
 .pricing-btn {
@@ -130,7 +137,7 @@
   opacity: 0.8;
 }
 
-/* Ratings */
+/* ✅ Ratings Section */
 .rating-section {
   margin-top: 1.5rem;
   display: flex;
@@ -155,28 +162,35 @@
   cursor: pointer;
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
+/* 📱 **Responsive Adjustments** */
+
+/* ✅ Tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
   .vps-section {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 4rem 5%;
+    padding: 5rem 5%;
   }
 
   .man-image {
-    max-width: 60%;
     position: static;
-    margin: 0 auto;
+    max-height: 50vh;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .guide-section {
-    position: relative;
+    position: static;
     text-align: center;
-    left: 0;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .vps-details {
     max-width: 100%;
+    text-align: center;
     margin: 0 auto;
   }
 
@@ -185,17 +199,19 @@
   }
 }
 
-@media (max-width: 768px) {
+/* ✅ Mobile (768px and below) */
+@media screen and (max-width: 768px) {
   .vps-section {
-    padding: 3rem 5%;
-  }
-
-  .man-image {
-    max-width: 70%;
+    padding: 4rem 3%;
+    min-height: auto;
   }
 
   .vps-heading {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+
+  .vps-title {
+    font-size: 1.4rem;
   }
 
   .vps-features li {
@@ -204,7 +220,7 @@
 
   .cta-buttons {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.75rem;
   }
 
   .pricing-btn,
@@ -213,25 +229,31 @@
   }
 }
 
-@media (max-width: 480px) {
+/* ✅ Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
   .vps-section {
-    padding: 2rem 5%;
-  }
-
-  .man-image {
-    max-width: 80%;
+    padding: 3rem 5%;
   }
 
   .vps-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .vps-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .vps-features li {
+    font-size: 0.9rem;
   }
 
   .cta-buttons {
-    flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .pricing-btn,
+  .managed-vps-btn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.2rem;
   }
 }

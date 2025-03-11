@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
-
-/* Container */
+/* ✅ Video Testimonials Container */
 .video-testimonials {
   width: 100vw;
   max-width: 1600px;
@@ -9,44 +7,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 80px 5% 40px;
+  padding: 100px 5% 40px;
   margin: 0 auto;
   position: relative;
   background: linear-gradient(180deg, #6c5fd4 23.53%, #ffffff 150.05%);
 }
 
-/* Title */
+/* ✅ Section Title */
 .testimonial-title {
   font-size: 32px;
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-bottom: 40px;
-  width: 80%;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 10;
 }
 
-/* Container for Testimonial Cards */
+/* ✅ Testimonial Cards Grid */
 .testimonial-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   align-items: center;
   width: 100%;
   gap: 30px;
   max-width: 1440px;
-  padding-top: 40px;
+  padding-top: 100px;
 }
 
-/* Each Testimonial Card */
+/* ✅ Individual Testimonial Card */
 .testimonial-card {
   text-align: center;
   background: transparent;
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
+  box-shadow: none;
   max-width: 100%;
 }
 
-/* Image Section */
+/* ✅ Video Thumbnail Container */
 .testimonial-image {
   position: relative;
   width: 100%;
@@ -60,7 +63,7 @@
   border-radius: 15px;
 }
 
-/* Play Button */
+/* ✅ Play Button */
 .play-button {
   position: absolute;
   top: 50%;
@@ -76,19 +79,24 @@
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-/* Sound Icon */
+.play-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* ✅ Sound Icon (For specific videos if needed) */
 .sound-icon {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 50%;
-  left: 50%;
+  top: 85%;
+  left: 80%;
   transform: translate(-50%, -50%);
 }
 
-/* Name */
+/* ✅ Name */
 .testimonial-name {
   font-size: 20px;
   font-weight: bold;
@@ -96,32 +104,34 @@
   color: white;
 }
 
-/* Role */
+/* ✅ Role */
 .testimonial-role {
   font-size: 16px;
   color: white;
 }
 
-/* Responsive Adjustments */
+/* 📱 **Responsive Adjustments** */
+
+/* ✅ Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
   .testimonial-container {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
+/* ✅ Mobile (768px and below) */
 @media screen and (max-width: 768px) {
   .video-testimonials {
-    padding: 60px 3% 30px;
+    padding: 70px 3% 30px;
     min-height: 700px;
   }
   .testimonial-title {
     font-size: 28px;
-    width: 90%;
+    top: 30px;
   }
   .testimonial-container {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding-top: 40px;
-    gap: 20px;
+    padding-top: 80px;
   }
   .play-button {
     width: 50px;
@@ -130,13 +140,19 @@
   }
 }
 
+/* ✅ Small Mobile (480px and below) */
 @media screen and (max-width: 480px) {
+  .video-testimonials {
+    padding: 50px 3% 20px;
+    min-height: 600px;
+  }
   .testimonial-title {
     font-size: 24px;
+    top: 20px;
   }
   .testimonial-container {
-    grid-template-columns: 1fr;
-    padding-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding-top: 60px;
   }
   .play-button {
     width: 45px;

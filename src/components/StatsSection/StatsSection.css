@@ -1,29 +1,35 @@
+/* Stats Section - Layout */
 .stats-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #6c5ce7;
   color: white;
-  padding: 50px 20px; /* Further increased padding for larger section */
+  padding: 50px 10%;
   font-family: Arial, sans-serif;
-  font-size: 22px; /* Increased base font size */
+  font-size: 22px;
   transition: opacity 0.5s ease-in-out;
   margin: 0;
+  flex-wrap: wrap;
 }
 
+/* Each Stat Box */
 .stat-box {
   text-align: center;
   width: 25%;
-  position: relative; /* Needed for the divider */
+  position: relative;
+  min-width: 180px;
 }
 
+/* Stat Number */
 .stat-value {
-  font-size: 42px; /* Increased number size */
+  font-size: 42px;
   font-weight: bold;
 }
 
+/* Stat Description */
 .stat-desc {
-  font-size: 20px; /* Increased text size */
+  font-size: 20px;
   margin-top: 8px;
 }
 
@@ -34,16 +40,35 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 3px; /* Increased line thickness */
-  height: 80%; /* Increased line height */
-  background-color: white; /* White line color */
+  width: 3px;
+  height: 80%;
+  background-color: white;
 }
 
-/* Responsive Design */
+/* 🔹 Responsive Adjustments */
+@media (max-width: 1024px) {
+  .stats-container {
+    padding: 40px 5%;
+  }
+
+  .stat-box {
+    width: 30%;
+  }
+
+  .stat-value {
+    font-size: 38px;
+  }
+
+  .stat-desc {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-container {
     flex-direction: column;
     text-align: center;
+    padding: 30px 5%;
   }
 
   .stat-box {
@@ -51,11 +76,34 @@
     margin-bottom: 20px;
   }
 
+  .stat-value {
+    font-size: 36px;
+  }
+
+  .stat-desc {
+    font-size: 18px;
+  }
+
+  /* Convert dividers to horizontal for mobile */
   .stat-box:not(:last-child)::after {
-    width: 90%; /* Makes the line horizontal */
-    height: 3px; /* Horizontal line thickness */
+    width: 90%;
+    height: 3px;
     bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-container {
+    padding: 20px 5%;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+
+  .stat-desc {
+    font-size: 16px;
   }
 }

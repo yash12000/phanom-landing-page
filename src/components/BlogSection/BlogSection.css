@@ -1,8 +1,10 @@
+/* Blog Section */
 .blog-section {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 /* Blog Heading */
@@ -11,10 +13,10 @@
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
+  letter-spacing: 0.5%;
   margin-bottom: 20px;
 }
 
-/* Colored Highlights */
 .blog-highlight {
   color: blue;
 }
@@ -26,10 +28,12 @@
 /* Blog Description */
 .blog-description {
   font-family: "Cambria", serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: #252525;
   margin-bottom: 50px;
+  padding: 0 20px;
 }
 
 /* Blog Container */
@@ -47,6 +51,7 @@
   border-radius: 10px;
   text-align: center;
   width: 30%;
+  min-width: 280px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -99,8 +104,18 @@
   margin-top: 15px;
 }
 
-/* 🔹 Responsive Styling */
+/* 🔹 Responsive Design */
 @media (max-width: 1024px) {
+  .blog-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .blog-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
   .blog-container {
     gap: 30px;
   }
@@ -108,17 +123,19 @@
   .blog-card {
     width: 45%;
   }
-
-  .blog-heading {
-    font-size: 32px;
-  }
-
-  .blog-description {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 768px) {
+  .blog-heading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .blog-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .blog-container {
     flex-direction: column;
     align-items: center;
@@ -126,15 +143,35 @@
   }
 
   .blog-card {
-    width: 100%;
+    width: 90%;
   }
+}
 
+@media (max-width: 480px) {
   .blog-heading {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   .blog-description {
     font-size: 14px;
-    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .blog-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .blog-title {
+    font-size: 18px;
+  }
+
+  .blog-info {
+    font-size: 12px;
+  }
+
+  .blog-text {
+    font-size: 14px;
   }
 }

@@ -1,20 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
-
+/* ✅ Why Choose Us Section */
 .why-choose-us-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   padding: 40px 60px;
+  position: relative;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-/* Left Side Animation */
+/* ✅ Left Side Animation */
 .left-animation {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  transform: translateX(-20px);
 }
 
 .semi-circle {
@@ -22,7 +23,7 @@
   animation: colorChange 5s infinite alternate ease-in-out;
 }
 
-/* Animation for Semi-circle */
+/* ✅ Animation for Semi-Circle */
 @keyframes colorChange {
   0% {
     filter: hue-rotate(0deg);
@@ -32,111 +33,114 @@
   }
 }
 
-/* Centered Text: "Why Choose Us?" */
+/* ✅ Centered "Why Choose Us?" */
 .center-text {
   flex: 1;
   display: flex;
   justify-content: center;
+  transform: translateX(-10px);
 }
 
 .text-image {
   width: 180px;
 }
 
-/* Right Side: Text Content */
+/* ✅ Right Side: Text Content */
 .right-content {
   flex: 1.5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 60px;
+  padding-left: 40px;
+  max-width: 450px;
+  transform: translateX(-15px);
 }
 
-/* Service content box */
+/* ✅ Service Content Box */
 .content-box {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 10px;
   max-width: 400px;
+  transform: translateX(-10px);
 }
 
-/* Icon + Text Layout */
+/* ✅ Icon + Text Layout */
 .text-content {
   display: flex;
   flex-direction: column;
 }
 
-/* Service Logo */
+/* ✅ Service Logo */
 .service-logo {
   width: 50px;
   height: 50px;
 }
 
-/* Heading */
+/* ✅ Headings */
 h3 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
+  transform: translateX(-10px);
 }
 
-/* Description */
+/* ✅ Descriptions */
 p {
   font-size: 18px;
   color: #555;
   line-height: 1.4;
+  transform: translateX(-10px);
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
+/* 📱 **Responsive Adjustments** */
+
+/* ✅ Tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
   .why-choose-us-section {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 30px 40px;
+    padding: 40px 5%;
   }
 
   .left-animation {
     justify-content: center;
-    order: 1;
-  }
-
-  .semi-circle {
-    width: 200px;
-  }
-
-  .center-text {
-    order: 2;
-    text-align: center;
+    transform: translateX(0);
   }
 
   .right-content {
-    order: 3;
     padding-left: 0;
     align-items: center;
     text-align: center;
+    transform: translateX(0);
   }
 
   .content-box {
     justify-content: center;
+    transform: translateX(0);
+  }
+
+  h3,
+  p {
+    transform: translateX(0);
   }
 }
 
-@media (max-width: 768px) {
-  .why-choose-us-section {
-    padding: 20px;
-    gap: 20px;
-  }
-
+/* ✅ Mobile (768px and below) */
+@media screen and (max-width: 768px) {
   .semi-circle {
-    width: 150px;
+    width: 200px;
   }
 
   .text-image {
-    width: 140px;
+    width: 150px;
   }
 
-  .right-content {
-    padding: 0;
+  .service-logo {
+    width: 40px;
+    height: 40px;
   }
 
   h3 {
@@ -148,17 +152,23 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+/* ✅ Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
   .why-choose-us-section {
-    padding: 15px;
+    padding: 30px 3%;
   }
 
   .semi-circle {
-    width: 120px;
+    width: 150px;
   }
 
   .text-image {
-    width: 120px;
+    width: 130px;
+  }
+
+  .service-logo {
+    width: 35px;
+    height: 35px;
   }
 
   h3 {
@@ -167,5 +177,11 @@ p {
 
   p {
     font-size: 14px;
+  }
+
+  .content-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
