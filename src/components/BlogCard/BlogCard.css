@@ -1,0 +1,78 @@
+.blog-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Blog Category */
+.blog-category {
+  color: #8165e4;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Blog Info (Icons & Numbers) */
+.blog-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Blog Description */
+.blog-description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* 🔹 Responsive Styling for Mobile */
+@media (max-width: 768px) {
+  .blog-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .blog-title {
+    font-size: 18px;
+  }
+
+  .blog-info {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-description {
+    font-size: 14px;
+  }
+}

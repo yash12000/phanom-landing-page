@@ -1,0 +1,140 @@
+/* Container */
+.connect-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Title Styling */
+.connect-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #a1a1a1;
+  margin: 0;
+}
+
+/* Wrapper to Align Form & Button */
+.connect-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Form Container */
+.connect-form {
+  display: flex;
+  align-items: center;
+  background: #f2f4f8;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 533px;
+  height: 76px;
+}
+
+/* Input Field */
+.connect-form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-family: "Cambria", serif;
+  color: #a5a5a5;
+  padding: 10px;
+  outline: none;
+}
+
+/* Send Button */
+.connect-button {
+  width: 150px;
+  height: 74px;
+  background: #715de3;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.connect-button:hover {
+  background: #574bd3;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .connect-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .connect-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .connect-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .connect-form {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .connect-button {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-title {
+    font-size: 24px;
+  }
+
+  .connect-form {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .connect-button {
+    max-width: 350px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-title {
+    font-size: 20px;
+  }
+
+  .connect-form {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .connect-button {
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+  }
+}

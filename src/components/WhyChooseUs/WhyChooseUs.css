@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
+
+.why-choose-us-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 60px;
+  gap: 30px;
+}
+
+/* Left Side Animation */
+.left-animation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.semi-circle {
+  width: 250px;
+  animation: colorChange 5s infinite alternate ease-in-out;
+}
+
+/* Animation for Semi-circle */
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Centered Text: "Why Choose Us?" */
+.center-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.text-image {
+  width: 180px;
+}
+
+/* Right Side: Text Content */
+.right-content {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px;
+}
+
+/* Service content box */
+.content-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+/* Icon + Text Layout */
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Service Logo */
+.service-logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Heading */
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Description */
+p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .why-choose-us-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 40px;
+  }
+
+  .left-animation {
+    justify-content: center;
+    order: 1;
+  }
+
+  .semi-circle {
+    width: 200px;
+  }
+
+  .center-text {
+    order: 2;
+    text-align: center;
+  }
+
+  .right-content {
+    order: 3;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-box {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us-section {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .semi-circle {
+    width: 150px;
+  }
+
+  .text-image {
+    width: 140px;
+  }
+
+  .right-content {
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us-section {
+    padding: 15px;
+  }
+
+  .semi-circle {
+    width: 120px;
+  }
+
+  .text-image {
+    width: 120px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

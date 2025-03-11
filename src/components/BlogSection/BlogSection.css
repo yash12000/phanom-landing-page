@@ -1,0 +1,140 @@
+.blog-section {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Blog Heading */
+.blog-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+
+/* Colored Highlights */
+.blog-highlight {
+  color: blue;
+}
+
+.articles-highlight {
+  color: purple;
+}
+
+/* Blog Description */
+.blog-description {
+  font-family: "Cambria", serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #252525;
+  margin-bottom: 50px;
+}
+
+/* Blog Container */
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Blog Card */
+.blog-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Blog Category */
+.blog-category {
+  color: blue;
+  font-size: 14px;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Blog Info */
+.blog-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Blog Text */
+.blog-text {
+  font-family: "Cambria", serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+  margin-top: 15px;
+}
+
+/* 🔹 Responsive Styling */
+@media (max-width: 1024px) {
+  .blog-container {
+    gap: 30px;
+  }
+
+  .blog-card {
+    width: 45%;
+  }
+
+  .blog-heading {
+    font-size: 32px;
+  }
+
+  .blog-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-heading {
+    font-size: 28px;
+  }
+
+  .blog-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,61 @@
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6c5ce7;
+  color: white;
+  padding: 50px 20px; /* Further increased padding for larger section */
+  font-family: Arial, sans-serif;
+  font-size: 22px; /* Increased base font size */
+  transition: opacity 0.5s ease-in-out;
+  margin: 0;
+}
+
+.stat-box {
+  text-align: center;
+  width: 25%;
+  position: relative; /* Needed for the divider */
+}
+
+.stat-value {
+  font-size: 42px; /* Increased number size */
+  font-weight: bold;
+}
+
+.stat-desc {
+  font-size: 20px; /* Increased text size */
+  margin-top: 8px;
+}
+
+/* White Divider Line Between Sections */
+.stat-box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px; /* Increased line thickness */
+  height: 80%; /* Increased line height */
+  background-color: white; /* White line color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .stat-box:not(:last-child)::after {
+    width: 90%; /* Makes the line horizontal */
+    height: 3px; /* Horizontal line thickness */
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,89 @@
+.collabs-container {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Sticky Section */
+.sticky-section {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.collabs-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Description */
+.collabs-description {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Marquee Wrapper */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Marquee Animation */
+.marquee {
+  display: flex;
+  width: 200%;
+  white-space: nowrap;
+  align-items: center;
+}
+
+/* Collabs Logos */
+.collabs-logos {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+  .collabs-title {
+    font-size: 28px;
+  }
+  .collabs-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collabs-title {
+    font-size: 24px;
+  }
+  .collabs-description {
+    font-size: 14px;
+  }
+  .collabs-logos {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collabs-title {
+    font-size: 20px;
+  }
+  .collabs-description {
+    font-size: 13px;
+  }
+  .collabs-logos {
+    max-width: 800px;
+  }
+}

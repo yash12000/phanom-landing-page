@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
+
+/* Center the entire mission section */
+.mission-section {
+  text-align: center;
+  padding: 50px 10%;
+}
+
+/* Title Styling */
+.mission-title {
+  font-size: 36px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+}
+
+/* Subtitle */
+.mission-subtext {
+  font-size: 18px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 50px;
+}
+
+/* Container for cards */
+.mission-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.mission-card {
+  background: white;
+  border-radius: 8px;
+  padding: 50px 30px 30px;
+  width: 100%;
+  max-width: 378px;
+  height: auto;
+  box-shadow: 0px 4px 16px 2px #00000040;
+  position: relative;
+  text-align: center;
+  border-top: 4px solid #cd1ee5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Large Transparent Number */
+.mission-number {
+  font-size: 90px;
+  font-weight: bold;
+  color: #6c5fd4;
+  opacity: 0.2;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Card Heading */
+.mission-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Card Paragraph */
+.mission-card p {
+  font-size: 18px;
+  color: black;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .mission-section {
+    padding: 40px 5%;
+  }
+
+  .mission-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mission-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-title {
+    font-size: 28px;
+  }
+
+  .mission-subtext {
+    font-size: 16px;
+  }
+
+  .mission-card {
+    width: 100%;
+    max-width: 90%;
+    padding: 40px 20px;
+  }
+
+  .mission-card h3 {
+    font-size: 20px;
+  }
+
+  .mission-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-title {
+    font-size: 24px;
+  }
+
+  .mission-subtext {
+    font-size: 14px;
+  }
+
+  .mission-card {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .mission-card h3 {
+    font-size: 18px;
+  }
+
+  .mission-card p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

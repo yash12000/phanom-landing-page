@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Montserrat:wght@600&display=swap");
+
+.footer {
+  background: linear-gradient(180deg, #43398e 0%, #1d1734 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-heading {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-subtext {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 30px;
+}
+
+.join-us-button {
+  width: 180px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  color: #6c5fd4;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.join-us-button:hover {
+  background-color: #f0f0f0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 160px;
+}
+
+.footer-middle,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  flex: 1;
+}
+
+.footer-middle a,
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-middle a:hover,
+.footer-right a:hover {
+  color: #aaa;
+}
+
+.footer-address {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-address h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-address p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.footer-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-terms a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.footer-call {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.phone-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.call-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.call-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .footer-heading {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .footer-subtext {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right,
+  .footer-address {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .footer-subtext {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .footer-bottom {
+    padding: 30px 10px;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  .join-us-button {
+    width: 160px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .footer-call {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .phone-icon {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .footer-subtext {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .footer-middle a,
+  .footer-right a {
+    font-size: 14px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+}

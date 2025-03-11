@@ -1,0 +1,166 @@
+.service-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: white;
+  }
+  
+  .left-section {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .explore-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #5e4be2;
+    text-shadow: 3px 3px 0px #ccc;
+  }
+  
+  .explore-title span {
+    color: #4b2be2;
+  }
+  
+  .explore-description {
+    font-size: 16px;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .appointment-btn {
+    padding: 12px 24px;
+    background: #654de4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .right-section {
+    flex: 2;
+  }
+  
+  .digital-marketing-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+    color: #5e4be2;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  .service-card-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 250px;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .appointments {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #444;
+    margin-top: 5px;
+  }
+  
+  .learn-more-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #4b2be2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tools-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .tools-container span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .vector-symbol {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #5e4be2;
+  }
+  
+ /* SEO Card Specific Styling */
+.seo-card {
+    background: linear-gradient(135deg, #667EEA, #764BA2);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 250px;
+  }
+  
+  .seo-card .service-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Ensuring visibility */
+  }
+  
+  .seo-card .service-description,
+  .seo-card .appointments,
+  .seo-card .details {
+    color: #f0f0f0; /* Slightly lighter for better readability */
+  }
+  
+  .seo-card .service-title span {
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+  }
+  
