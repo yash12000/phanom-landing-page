@@ -1,55 +1,150 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../../assets/newloggg.d00e50814202bbb2c40b 1.png";
-import bubble from "../../assets/bubble.png";
+import logo from "../../assets/flogo.png";
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  // Navigation items data
+  const navItems = [
+    { 
+      name: "Service",
+      hasDropdown: true,
+      dropdownItems: ["Web Development", "Mobile Apps", "Digital Marketing", "Cloud Services"]
+    },
+    { 
+      name: "Hire Indian Talent",
+      hasDropdown: true,
+      dropdownItems: ["Developers", "Designers", "Project Managers", "Digital Marketers"]
+    },
+    { name: "Our Portfolio", hasDropdown: false },
+    { name: "Case Study", hasDropdown: false },
+  ];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (!isMobileMenuOpen) {
+      setActiveDropdown(null);
+    }
+  };
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   return (
-    <header className="header">
-      <div className="container">
+    <>
+      <header className="header">
         {/* Logo */}
-        <div className="logo">
-          <img src={logo} alt="Phanom Professionals" />
+        <div className="logo-container">
+          <img src={logo} alt="Company Logo" className="logo" />
         </div>
 
-        {/* Navigation Menu */}
-        <nav className={menuOpen ? "nav open" : "nav"}>
-          <ul>
-            <li>
-              <a href="#">Service ▾</a>
-            </li>
-            <li>
-              <a href="#">Hire Indian Talent ▾</a>
-            </li>
-            <li>
-              <a href="#">Our Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Case Study</a>
-            </li>
-          </ul>
-        </nav>
+        {/* Navigation and CTA */}
+        <div className="nav-container">
+          {/* Navigation Menu */}
+          <nav className="nav-menu">
+            <ul className="nav-list">
+              {navItems.map((item, index) => (
+                <li 
+                  key={index} 
+                  className="nav-item"
+                  onMouseEnter={() => item.hasDropdown && setActiveDropdown(index)}
+                  onMouseLeave={() => item.hasDropdown && setActiveDropdown(null)}
+                >
+                  {item.hasDropdown ? (
+                    <div className="dropdown">
+                      <span className="nav-link">
+                        {item.name}
+                        <span className="dropdown-arrow">▾</span>
+                      </span>
+                      {activeDropdown === index && (
+                        <div className="dropdown-content">
+                          {item.dropdownItems.map((dropItem, idx) => (
+                            <a key={idx} href="#" className="dropdown-item">
+                              {dropItem}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="nav-link">{item.name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* Button */}
-        <a href="#" className="btn">
+          {/* Mobile Menu Button */}
+          <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+
+          {/* CTA Button */}
+          <button className="appointment-btn">
+            <span className="btn-text">Book an Appointment</span>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu} />
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+        {/* Decorative Elements */}
+        <div className="decorative-circle"></div>
+        <div className="decorative-circle-2"></div>
+
+        {/* Menu Items */}
+        <div className="mobile-menu-wrapper">
+          <div className={`mobile-menu-item ${activeDropdown === 0 ? 'active' : ''}`} 
+               onClick={() => toggleDropdown(0)}>
+            <div className="mobile-menu-header">
+              <span>Service</span>
+              <span className="chevron-icon">▾</span>
+            </div>
+            <div className={`mobile-dropdown-content ${activeDropdown === 0 ? 'show' : ''}`}>
+              {navItems[0].dropdownItems.map((item, idx) => (
+                <a key={idx} href="#" className="mobile-dropdown-item">
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className={`mobile-menu-item ${activeDropdown === 1 ? 'active' : ''}`}
+               onClick={() => toggleDropdown(1)}>
+            <div className="mobile-menu-header">
+              <span>Hire Indian Talent</span>
+              <span className="chevron-icon">▾</span>
+            </div>
+            <div className={`mobile-dropdown-content ${activeDropdown === 1 ? 'show' : ''}`}>
+              {navItems[1].dropdownItems.map((item, idx) => (
+                <a key={idx} href="#" className="mobile-dropdown-item">
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="mobile-menu-item">
+            Our Portfolio
+          </div>
+
+          <div className="mobile-menu-item">
+            Case Study
+          </div>
+        </div>
+
+        <button className="mobile-book-appointment">
           Book an Appointment
-        </a>
-
-        {/* Mobile Menu Icon */}
-        <div className="menu-icon" onClick={toggleMenu}>
-          ☰
-        </div>
+        </button>
       </div>
-
-      {/* Floating Bubble Image */}
-      <img src={bubble} alt="Bubble" className="bubble-img" />
-    </header>
+    </>
   );
 };
 

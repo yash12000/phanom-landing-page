@@ -2,7 +2,7 @@ import React from "react";
 import "./WhyChooseUs.css";
 import semiCircle from "../../assets/Animation Comp.png";
 import textImage from "../../assets/Why ChooseUs_.png";
-import serviceIcon from "../../assets/service-icon.png"; // Import new logo
+import serviceIcon from "../../assets/service-icon.png";
 
 const WhyChooseUs = () => {
   return (

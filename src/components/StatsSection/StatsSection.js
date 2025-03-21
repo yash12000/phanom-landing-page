@@ -22,7 +22,7 @@ const StatsSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % statsData.length);
-    }, 3000); // Rotate every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

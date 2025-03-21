@@ -54,14 +54,16 @@ const Footer = () => {
 
       {/* Copyright & Call Section */}
       <div className="footer-bottom-extra">
-        <div className="footer-terms">
-          <a href="#">Terms of Use</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookies</a>
+        <div className="footer-left-section">
+          <div className="footer-terms">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+          </div>
+          <p className="footer-copyright">
+            © 2025 Company Name. All rights reserved.
+          </p>
         </div>
-        <p className="footer-copyright">
-          © 2025 Company Name. All rights reserved.
-        </p>
 
         <div className="footer-call">
           <img src={phoneIcon} alt="Phone Icon" className="phone-icon" />

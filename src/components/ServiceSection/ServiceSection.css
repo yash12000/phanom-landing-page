@@ -1,257 +1,312 @@
-/* ✅ Service Section - Layout */
+/* Service Section - Layout */
 .service-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 40px 10%;
+  align-items: flex-start;
+  padding: 60px 120px;
   background: white;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 60px;
 }
 
-/* ✅ Left Section */
+/* Left Section */
 .left-section {
   flex: 1;
-  text-align: left;
-  max-width: 500px;
+  max-width: 400px;
+  position: sticky;
+  top: 100px;
 }
 
-/* ✅ Title Styling */
 .explore-title {
-  font-size: 40px;
-  font-weight: bold;
-  color: #5e4be2;
-  text-shadow: 3px 3px 0px #ccc;
+  font-size: 64px;
+  font-weight: 900;
+  color: #333;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 .explore-title span {
-  color: #4b2be2;
+  color: #6c5ce7;
 }
 
-/* ✅ Description */
 .explore-description {
-  font-size: 16px;
-  margin: 20px 0;
-  color: #333;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ✅ Call-To-Action Button */
 .appointment-btn {
-  padding: 12px 24px;
-  background: #654de4;
+  padding: 15px 30px;
+  background: #6c5ce7;
   color: white;
   border: none;
-  border-radius: 20px;
-  font-size: 16px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .appointment-btn:hover {
-  background: #4b2be2;
+  background: #5a4bce;
+  transform: translateY(-2px);
 }
 
-/* ✅ Right Section - Container */
+/* Right Section */
 .right-section {
   flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  max-width: 800px;
 }
 
-/* ✅ Digital Marketing Section */
-.digital-marketing-container {
+/* Digital Marketing Header */
+.digital-marketing-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-/* ✅ Titles */
+.marketing-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
 .main-title {
-  font-size: 24px;
-  color: #5e4be2;
-  font-weight: bold;
+  font-size: 32px;
+  color: #6c5ce7;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
 .subtitle {
-  font-size: 14px;
-  color: #333;
-  margin-top: 5px;
-}
-
-/* ✅ Service Card Layout */
-.service-card-container {
-  display: grid;
-  grid-template-columns: repeat(
-    4,
-    1fr
-  );
-  gap: 15px;
-  margin-top: 20px;
-  width: 100%;
-  justify-content: center;
-}
-
-/* ✅ Service Card */
-.service-card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-.service-description {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+/* Service Slider */
+.service-slider {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-cards-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.service-card {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
 }
 
 .appointments {
-  font-size: 12px;
-  color: #999;
-  margin-top: 5px;
-}
-
-.details {
   font-size: 14px;
-  color: #444;
-  margin-top: 5px;
+  color: #6c5ce7;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ✅ Learn More Button */
 .learn-more-btn {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #4b2be2;
+  padding: 12px 24px;
+  background: #6c5ce7;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ✅ SEO Card Styling */
-.seo-card {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+.learn-more-btn:hover {
+  background: #5a4bce;
+  transform: translateY(-2px);
+}
+
+/* Slider Navigation */
+.slider-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slider-nav:hover {
+  background: #6c5ce7;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
 }
 
-.seo-card:hover {
-  transform: translateY(-5px);
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.seo-card .service-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.seo-card .service-description,
-.seo-card .appointments,
-.seo-card .details {
-  color: #f0f0f0;
+.dot.active {
+  background: #6c5ce7;
+  transform: scale(1.2);
 }
 
-/* 🔹 **Responsive Adjustments** */
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .service-section {
+    padding: 40px 80px;
+  }
 
-/* ✅ Tablets (1024px and below) */
+  .explore-title {
+    font-size: 54px;
+  }
+}
+
 @media (max-width: 1024px) {
   .service-section {
+    padding: 40px;
     flex-direction: column;
-    padding: 40px 5%;
-    text-align: center;
+    align-items: center;
   }
 
   .left-section {
-    max-width: 100%;
+    position: static;
+    max-width: 600px;
     text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .right-section {
+    max-width: 100%;
+  }
+
+  .explore-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-section {
+    padding: 30px 20px;
+  }
+
+  .explore-title {
+    font-size: 40px;
+  }
+
+  .explore-description {
+    font-size: 16px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-subtitle {
+    font-size: 16px;
+  }
+
+  .slider-nav {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section {
+    padding: 20px 15px;
   }
 
   .explore-title {
     font-size: 36px;
   }
 
-  .explore-description {
-    font-size: 16px;
-    margin-bottom: 30px;
+  .digital-marketing-header {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .appointment-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .digital-marketing-container {
-    justify-content: center;
-  }
-
-  /* 🌟 2 cards per row for tablets */
-  .service-card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ✅ Mobile (768px and below) */
-@media (max-width: 768px) {
-  .service-section {
-    padding: 40px 5%;
-  }
-
-  .explore-title {
-    font-size: 32px;
-  }
-
-  .explore-description {
-    font-size: 15px;
-  }
-
-  .appointment-btn {
-    font-size: 14px;
-    padding: 10px 18px;
-  }
-
-  /* 🌟 1 card per row for small screens */
-  .service-card-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-/* ✅ Small Mobile (480px and below) */
-@media (max-width: 480px) {
-  .service-section {
-    padding: 30px 5%;
-  }
-
-  .explore-title {
+  .main-title {
     font-size: 28px;
   }
 
-  .explore-description {
-    font-size: 14px;
+  .service-card {
+    padding: 15px;
   }
 
-  .appointment-btn {
-    font-size: 13px;
-    padding: 8px 16px;
+  .card-title {
+    font-size: 22px;
   }
 
-  .service-card-container {
-    grid-template-columns: repeat(1, 1fr);
+  .learn-more-btn {
+    width: 100%;
   }
 }

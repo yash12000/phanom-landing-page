@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
@@ -12,212 +11,409 @@ body {
 
 /* 🔹 Header */
 .header {
-  background: #ffffff;
-  padding: 15px 40px;
+  width: 100%;
+  height: 90px;
+  background: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+  padding: 0 120px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔹 Logo Container */
+.logo-container {
+  height: 75px;
+  width: 180px;
   position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-/* 🔹 Container */
-.container {
+.logo {
   width: 100%;
-  max-width: 1200px;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* 🔹 Navigation Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+/* 🔹 Navigation Menu */
+.nav-menu {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link:hover {
+  color: #6c5ce7;
+}
+
+/* 🔹 Dropdown Styling */
+.dropdown {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 100;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+  color: #6c5ce7;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* 🔹 Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* 🔹 CTA Button */
+.appointment-btn {
+  height: 46px;
+  min-width: 206px;
+  border-radius: 23px;
+  background-color: #6c5ce7;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.btn-text {
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.appointment-btn:hover {
+  background-color: #5a4bce;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 0 0 24px 24px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  display: block;
+  transform: translateY(0);
+}
+
+.mobile-menu-item {
+  position: relative;
+  padding: 20px 16px;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.mobile-menu-item.active {
+  background: #f8f9fa;
+}
+
+.mobile-menu-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-family: inherit;
 }
 
-/* 🔹 Logo */
-.logo img {
-  height: 70px;
-  margin-left: -15px;
+.chevron-icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
 }
 
-/* 🔹 Floating Bubble Image */
-.bubble-img {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 50px;
-  opacity: 0.8;
+.mobile-menu-item.active .chevron-icon {
+  transform: rotate(180deg);
 }
 
-/* 🔹 Navigation */
-.nav {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav ul li {
-  display: inline;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav ul li a:hover {
-  color: #6a0dad;
-}
-
-/* 🔹 Book an Appointment Button */
-.book-appointment {
-  margin-left: auto;
-}
-
-.btn {
-  background: #6a0dad;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #4e0785;
-}
-
-/* 🔹 Mobile Menu Icon */
-.menu-icon {
+.mobile-dropdown-content {
   display: none;
-  font-size: 24px;
-  cursor: pointer;
+  padding-top: 16px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
 }
 
-/* 🔹 Service Section */
-.service-section {
+.mobile-dropdown-content.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-dropdown-item:hover {
+  background: #f5f5f5;
+  color: #6c5ce7;
+}
+
+.mobile-book-appointment {
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 40px 60px;
+  padding: 16px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 24px;
 }
 
-.service-content {
-  max-width: 600px;
-  text-align: left;
+.mobile-book-appointment:hover {
+  background: #5a4bce;
+  transform: translateY(-2px);
 }
 
-/* 🔹 Responsive Styles */
+/* Menu Overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .header {
+    padding: 0 80px;
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
-    padding: 15px 20px;
+    padding: 0 40px;
   }
 
-  .logo img {
-    height: 60px;
+  .nav-container {
+    gap: 32px;
   }
 
-  .nav ul {
-    gap: 15px;
+  .nav-list {
+    gap: 16px;
   }
 
-  .nav ul li a {
-    font-size: 14px;
+  .nav-link {
+    font-size: 15px;
+    padding: 6px 12px;
   }
 
-  .btn {
-    padding: 8px 16px;
-    font-size: 13px;
+  .appointment-btn {
+    min-width: 180px;
+    height: 42px;
   }
 
-  .service-section {
-    justify-content: center;
-    text-align: center;
+  .btn-text {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
-  .nav {
+  .header {
+    padding: 0 24px;
+  }
+
+  .nav-menu {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: white;
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .nav.open {
-    display: flex;
+  .nav-container {
+    gap: 20px;
   }
 
-  .nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .menu-icon {
+  .mobile-menu-btn {
     display: block;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  .appointment-btn {
+    min-width: 160px;
+    height: 40px;
   }
 
-  .book-appointment {
-    margin-left: 0;
+  .btn-text {
+    font-size: 14px;
   }
 
-  .service-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .logo-container {
+    height: 60px;
+    width: 140px;
+  }
+
+  .mobile-menu {
+    padding: 32px 24px;
+  }
+
+  .mobile-menu-item {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .mobile-menu-header {
+    font-size: inherit;
+  }
+
+  .mobile-book-appointment {
+    margin-top: 32px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    padding: 10px 15px;
+    padding: 0 16px;
   }
 
-  .logo img {
+  .appointment-btn {
+    min-width: 140px;
+  }
+
+  .btn-text {
+    font-size: 13px;
+  }
+
+  .logo-container {
     height: 50px;
+    width: 120px;
   }
 
-  .bubble-img {
-    width: 40px;
-    top: 5px;
-    right: 10px;
+  .mobile-menu-btn {
+    font-size: 20px;
   }
 
-  .menu-icon {
-    font-size: 22px;
+  .mobile-menu-item {
+    padding: 14px;
+    font-size: 15px;
   }
+}
 
-  .nav {
-    top: 60px;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 8px 14px;
-  }
-
-  .service-section {
-    padding: 30px 5%;
+@media (min-width: 769px) {
+  .mobile-menu,
+  .menu-overlay {
+    display: none !important;
   }
 }
