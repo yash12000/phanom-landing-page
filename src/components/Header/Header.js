@@ -7,7 +7,6 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Navigation items data
   const navItems = [
     { 
       name: "Service",
@@ -37,14 +36,11 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        {/* Logo */}
         <div className="logo-container">
           <img src={logo} alt="Company Logo" className="logo" />
         </div>
 
-        {/* Navigation and CTA */}
         <div className="nav-container">
-          {/* Navigation Menu */}
           <nav className="nav-menu">
             <ul className="nav-list">
               {navItems.map((item, index) => (
@@ -78,28 +74,22 @@ const Header = () => {
             </ul>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
 
-          {/* CTA Button */}
           <button className="appointment-btn">
             <span className="btn-text">Book an Appointment</span>
           </button>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <div className={`menu-overlay ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu} />
 
-      {/* Mobile Menu */}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-        {/* Decorative Elements */}
         <div className="decorative-circle"></div>
         <div className="decorative-circle-2"></div>
 
-        {/* Menu Items */}
         <div className="mobile-menu-wrapper">
           <div className={`mobile-menu-item ${activeDropdown === 0 ? 'active' : ''}`} 
                onClick={() => toggleDropdown(0)}>

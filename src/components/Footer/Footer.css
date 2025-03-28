@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Montserrat:wght@600&display=swap");
 
-/* Footer Container */
 .footer {
   background: linear-gradient(180deg, #43398e 0%, #1d1734 100%);
   color: white;
@@ -9,7 +8,6 @@
   width: 100%;
 }
 
-/* Footer Main Content */
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,6 @@
   margin-bottom: 60px;
 }
 
-/* Footer Heading */
 .footer-heading {
   font-family: Poppins, sans-serif;
   font-weight: 700;
@@ -27,7 +24,6 @@
   margin-bottom: 20px;
 }
 
-/* Footer Subtext */
 .footer-subtext {
   font-family: Poppins, sans-serif;
   font-weight: 600;
@@ -38,7 +34,6 @@
   margin-bottom: 30px;
 }
 
-/* Join Us Button */
 .join-us-button {
   width: 200px;
   height: 55px;
@@ -58,7 +53,6 @@
   background-color: #f0f0f0;
 }
 
-/* Footer Bottom Section */
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +61,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Footer Links & Address */
 .footer-middle,
 .footer-right {
   display: flex;
@@ -93,7 +86,6 @@
   width: 180px;
 }
 
-/* Footer Address */
 .footer-address {
   text-align: left;
 }
@@ -108,7 +100,6 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Extra Bottom Section */
 .footer-bottom-extra {
   display: flex;
   flex-direction: row;
@@ -146,14 +137,12 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Copyright */
 .footer-copyright {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   text-align: left;
 }
 
-/* Call Section */
 .footer-call {
   display: flex;
   align-items: center;
@@ -184,7 +173,6 @@
   color: white;
 }
 
-/* 🔹 Responsive Design */
 @media (max-width: 1024px) {
   .footer-heading {
     font-size: 40px;

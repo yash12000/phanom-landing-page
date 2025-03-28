@@ -7,17 +7,14 @@ import serviceIcon from "../../assets/service-icon.png";
 const WhyChooseUs = () => {
   return (
     <div className="why-choose-us-section">
-      {/* Left Side: Semi-circle Animation */}
       <div className="left-animation">
         <img src={semiCircle} alt="Animated Semi-Circle" className="semi-circle" />
       </div>
 
-      {/* Centered: "Why Choose Us?" Image */}
       <div className="center-text">
         <img src={textImage} alt="Why Choose Us?" className="text-image" />
       </div>
 
-      {/* Right Side: Text Content */}
       <div className="right-content">
         <div className="content-box">
           <img src={serviceIcon} alt="Service Icon" className="service-logo" />

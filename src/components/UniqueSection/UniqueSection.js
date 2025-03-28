@@ -78,7 +78,6 @@ const featureCards = [
 const UniqueSection = () => {
   return (
     <div className="unique-section">
-      {/* Left Side (Sticky Content) */}
       <div className="unique-left">
         <h2>
           What makes <br /> Us Unique?
@@ -95,7 +94,6 @@ const UniqueSection = () => {
         <button className="appointment-btn">Book an Appointment</button>
       </div>
 
-      {/* Right Side (Scrollable Content) */}
       <div className="unique-right">
         {featureCards.map((card) => (
           <div key={card.id} className="unique-card">

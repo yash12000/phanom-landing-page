@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ServiceSection.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-// Import service card images
 import seoIcon from "../../assets/seoIcon.png";
 import socialIcon from "../../assets/socialIcon.png";
 import ppcIcon from "../../assets/ppcIcon.png";
@@ -53,7 +52,6 @@ const ServiceSection = () => {
 
   return (
     <section className="service-section">
-      {/* Left Section */}
       <div className="left-section">
         <h2 className="explore-title">
           Explore <br /> our <br /> <span>Service</span>
@@ -65,9 +63,7 @@ const ServiceSection = () => {
         <button className="appointment-btn">Book an Appointment</button>
       </div>
 
-      {/* Right Section */}
       <div className="right-section">
-        {/* Digital Marketing Title */}
         <div className="digital-marketing-header">
           <img src={marketingIcon} alt="Digital Marketing" className="marketing-icon" />
           <h2 className="main-title">Digital Marketing</h2>
@@ -76,7 +72,6 @@ const ServiceSection = () => {
           Keep your lawn in top shape without lifting a finger and boost the appearance of your property.
         </p>
 
-        {/* Service Cards Slider */}
         <div className="service-slider">
           <button className="slider-nav prev" onClick={prevSlide}>
             <FaArrowLeft />
@@ -106,7 +101,6 @@ const ServiceSection = () => {
           </button>
         </div>
 
-        {/* Slider Dots */}
         <div className="slider-dots">
           {serviceCards.map((_, index) => (
             <span

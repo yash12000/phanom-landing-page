@@ -6,7 +6,6 @@ import phoneIcon from "../../assets/phone-icon.png";
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Main Content Section */}
       <div className="footer-content">
         <h2 className="footer-heading">
           Let's make something <br /> great together.
@@ -18,7 +17,6 @@ const Footer = () => {
         <button className="join-us-button">Join Us →</button>
       </div>
 
-      {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <div className="footer-left">
           <img src={logo} alt="Company Logo" className="footer-logo" />
@@ -52,7 +50,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright & Call Section */}
       <div className="footer-bottom-extra">
         <div className="footer-left-section">
           <div className="footer-terms">

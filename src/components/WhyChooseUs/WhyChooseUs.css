@@ -1,4 +1,3 @@
-/* ✅ Why Choose Us Section */
 .why-choose-us-section {
   display: flex;
   align-items: center;
@@ -9,7 +8,6 @@
   gap: 30px;
 }
 
-/* ✅ Left Side Animation */
 .left-animation {
   flex: 1;
   display: flex;
@@ -23,7 +21,6 @@
   animation: colorChange 5s infinite alternate ease-in-out;
 }
 
-/* ✅ Animation for Semi-Circle */
 @keyframes colorChange {
   0% {
     filter: hue-rotate(0deg);
@@ -33,7 +30,6 @@
   }
 }
 
-/* ✅ Centered "Why Choose Us?" */
 .center-text {
   flex: 1;
   display: flex;
@@ -45,7 +41,6 @@
   width: 180px;
 }
 
-/* ✅ Right Side: Text Content */
 .right-content {
   flex: 1.5;
   display: flex;
@@ -56,7 +51,6 @@
   transform: translateX(-15px);
 }
 
-/* ✅ Service Content Box */
 .content-box {
   display: flex;
   align-items: center;
@@ -66,19 +60,16 @@
   transform: translateX(-10px);
 }
 
-/* ✅ Icon + Text Layout */
 .text-content {
   display: flex;
   flex-direction: column;
 }
 
-/* ✅ Service Logo */
 .service-logo {
   width: 50px;
   height: 50px;
 }
 
-/* ✅ Headings */
 h3 {
   font-size: 24px;
   font-weight: bold;
@@ -86,7 +77,6 @@ h3 {
   transform: translateX(-10px);
 }
 
-/* ✅ Descriptions */
 p {
   font-size: 18px;
   color: #555;
@@ -94,9 +84,6 @@ p {
   transform: translateX(-10px);
 }
 
-/* 📱 **Responsive Adjustments** */
-
-/* ✅ Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
   .why-choose-us-section {
     flex-direction: column;
@@ -128,7 +115,6 @@ p {
   }
 }
 
-/* ✅ Mobile (768px and below) */
 @media screen and (max-width: 768px) {
   .semi-circle {
     width: 200px;
@@ -152,7 +138,6 @@ p {
   }
 }
 
-/* ✅ Small Mobile (480px and below) */
 @media screen and (max-width: 480px) {
   .why-choose-us-section {
     padding: 30px 3%;

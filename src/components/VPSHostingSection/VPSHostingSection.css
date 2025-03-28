@@ -1,4 +1,3 @@
-/* ✅ VPS Section - Full Width & Responsive */
 .vps-section {
   display: flex;
   flex-direction: row;
@@ -14,7 +13,6 @@
   min-height: 100vh;
 }
 
-/* ✅ Background Animation */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -33,7 +31,6 @@
   }
 }
 
-/* ✅ Man Image - Left Aligned & Responsive */
 .man-image {
   width: auto;
   height: 100%;
@@ -44,7 +41,6 @@
   z-index: 1;
 }
 
-/* ✅ Guide Section - Left Positioned */
 .guide-section {
   position: absolute;
   top: 2rem;
@@ -68,7 +64,6 @@
   color: #000;
 }
 
-/* ✅ VPS Details - Pushed to Right */
 .vps-details {
   max-width: 650px;
   z-index: 2;
@@ -76,7 +71,6 @@
   margin-left: auto;
 }
 
-/* ✅ Titles & Headings */
 .vps-title {
   font-size: 1.6rem;
   color: #000;
@@ -89,7 +83,6 @@
   color: #000;
 }
 
-/* ✅ Features List */
 .vps-features {
   list-style: none;
   padding: 0;
@@ -104,7 +97,6 @@
   color: #000;
 }
 
-/* ✅ CTA Buttons */
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -137,7 +129,6 @@
   opacity: 0.8;
 }
 
-/* ✅ Ratings Section */
 .rating-section {
   margin-top: 1.5rem;
   display: flex;
@@ -162,9 +153,6 @@
   cursor: pointer;
 }
 
-/* 📱 **Responsive Adjustments** */
-
-/* ✅ Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
   .vps-section {
     flex-direction: column;
@@ -199,7 +187,6 @@
   }
 }
 
-/* ✅ Mobile (768px and below) */
 @media screen and (max-width: 768px) {
   .vps-section {
     padding: 4rem 3%;
@@ -229,7 +216,6 @@
   }
 }
 
-/* ✅ Small Mobile (480px and below) */
 @media screen and (max-width: 480px) {
   .vps-section {
     padding: 3rem 5%;

@@ -1,10 +1,8 @@
-/* Center the entire mission section */
 .mission-section {
   text-align: center;
   padding: 50px 10%;
 }
 
-/* Title Styling */
 .mission-title {
   font-size: 36px;
   font-weight: bold;
@@ -15,7 +13,6 @@
   margin-bottom: 30px;
 }
 
-/* Subtitle */
 .mission-subtext {
   font-size: 18px;
   color: black;
@@ -23,7 +20,6 @@
   margin-bottom: 60px;
 }
 
-/* Container for cards */
 .mission-container {
   display: flex;
   justify-content: center;
@@ -32,7 +28,6 @@
   margin-top: 70px;
 }
 
-/* Card Styling */
 .mission-card {
   background: white;
   border-radius: 8px;
@@ -49,12 +44,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Add hover effect */
 .mission-card:hover {
   transform: translateY(-5px);
 }
 
-/* Large Transparent Number */
 .mission-number {
   font-size: 90px;
   font-weight: bold;
@@ -67,7 +60,6 @@
   z-index: -1;
 }
 
-/* Card Heading */
 .mission-card h3 {
   font-size: 22px;
   font-weight: bold;
@@ -78,7 +70,6 @@
   text-align: center;
 }
 
-/* Card Paragraph */
 .mission-card p {
   font-size: 18px;
   color: black;
@@ -89,7 +80,6 @@
   margin-bottom: auto;
 }
 
-/* 🔹 Responsive Styles */
 @media (max-width: 1024px) {
   .mission-section {
     padding: 50px 5%;

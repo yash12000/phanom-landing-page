@@ -12,10 +12,8 @@ const ConnectSection = () => {
 
   return (
     <div className="connect-section">
-      {/* Left Aligned Title */}
       <h2 className="connect-title">Build skills, connect.</h2>
 
-      {/* Right Aligned Form */}
       <div className="connect-wrapper">
         <form className="connect-form" onSubmit={handleSubmit}>
           <input

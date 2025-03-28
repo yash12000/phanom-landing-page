@@ -1,4 +1,3 @@
-/* Stats Section - Layout */
 .stats-container {
   display: flex;
   justify-content: space-around;
@@ -13,7 +12,6 @@
   flex-wrap: wrap;
 }
 
-/* Each Stat Box */
 .stat-box {
   text-align: center;
   width: 25%;
@@ -21,19 +19,16 @@
   min-width: 180px;
 }
 
-/* Stat Number */
 .stat-value {
   font-size: 42px;
   font-weight: bold;
 }
 
-/* Stat Description */
 .stat-desc {
   font-size: 20px;
   margin-top: 8px;
 }
 
-/* White Divider Line Between Sections */
 .stat-box:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -45,7 +40,6 @@
   background-color: white;
 }
 
-/* 🔹 Responsive Adjustments */
 @media (max-width: 1024px) {
   .stats-container {
     padding: 40px 5%;
@@ -84,7 +78,6 @@
     font-size: 18px;
   }
 
-  /* Convert dividers to horizontal for mobile */
   .stat-box:not(:last-child)::after {
     width: 90%;
     height: 3px;

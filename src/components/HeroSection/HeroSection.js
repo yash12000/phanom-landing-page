@@ -33,12 +33,10 @@ const HeroSection = () => {
         <button className="cta-button">Book an Appointment</button>
       </div>
 
-      {/* Right Side - Image Carousel */}
       <div className="hero-image">
         <img src={images[currentImage]} alt="SEO Visualization" className="fade-image" />
       </div>
 
-      {/* Stats Section - Below SEO Image */}
       <div className="stats">
         <div>
           <Counter end={24} duration={2} />

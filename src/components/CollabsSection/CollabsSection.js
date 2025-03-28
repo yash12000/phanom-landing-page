@@ -6,7 +6,6 @@ import collabsImage from "../../assets/Collabs.png";
 const CollabsSection = () => {
   return (
     <div className="collabs-container">
-      {/* Marquee Animation */}
       <div className="marquee-wrapper">
         <motion.div
           className="marquee"
@@ -17,7 +16,6 @@ const CollabsSection = () => {
             repeat: Infinity,
           }}
         >
-          {/* Duplicate image for a seamless effect */}
           <img
             src={collabsImage}
             alt="Collabs Logos"

@@ -4,14 +4,12 @@ import "./Mission.css";
 const Mission = () => {
   return (
     <section className="mission-section">
-      {/* Title */}
       <h2 className="mission-title">Our Mission</h2>
       <p className="mission-subtext">
         Empowering businesses with innovation, crafting bespoke solutions, and
         driving industry leadership.
       </p>
 
-      {/* Mission Content */}
       <div className="mission-container">
         <div className="mission-card">
           <div className="mission-number">01</div>

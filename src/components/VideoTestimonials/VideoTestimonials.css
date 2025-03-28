@@ -1,4 +1,3 @@
-/* ✅ Video Testimonials Container */
 .video-testimonials {
   width: 100vw;
   max-width: 1600px;
@@ -13,7 +12,6 @@
   background: linear-gradient(180deg, #6c5fd4 23.53%, #ffffff 150.05%);
 }
 
-/* ✅ Section Title */
 .testimonial-title {
   font-size: 32px;
   font-weight: bold;
@@ -27,7 +25,6 @@
   z-index: 10;
 }
 
-/* ✅ Testimonial Cards Grid */
 .testimonial-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -39,7 +36,6 @@
   padding-top: 100px;
 }
 
-/* ✅ Individual Testimonial Card */
 .testimonial-card {
   text-align: center;
   background: transparent;
@@ -49,7 +45,6 @@
   max-width: 100%;
 }
 
-/* ✅ Video Thumbnail Container */
 .testimonial-image {
   position: relative;
   width: 100%;
@@ -63,7 +58,6 @@
   border-radius: 15px;
 }
 
-/* ✅ Play Button */
 .play-button {
   position: absolute;
   top: 50%;
@@ -86,7 +80,6 @@
   background: rgba(255, 255, 255, 1);
 }
 
-/* ✅ Sound Icon (For specific videos if needed) */
 .sound-icon {
   position: absolute;
   width: 30px;
@@ -96,7 +89,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* ✅ Name */
 .testimonial-name {
   font-size: 20px;
   font-weight: bold;
@@ -104,22 +96,17 @@
   color: white;
 }
 
-/* ✅ Role */
 .testimonial-role {
   font-size: 16px;
   color: white;
 }
 
-/* 📱 **Responsive Adjustments** */
-
-/* ✅ Tablets (1024px and below) */
 @media screen and (max-width: 1024px) {
   .testimonial-container {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
-/* ✅ Mobile (768px and below) */
 @media screen and (max-width: 768px) {
   .video-testimonials {
     padding: 70px 3% 30px;
@@ -140,7 +127,6 @@
   }
 }
 
-/* ✅ Small Mobile (480px and below) */
 @media screen and (max-width: 480px) {
   .video-testimonials {
     padding: 50px 3% 20px;
